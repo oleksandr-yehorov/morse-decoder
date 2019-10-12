@@ -37,6 +37,14 @@ const MORSE_TABLE = {
     '-----':  '0',
 };
 
+// Initialization encrypted symbols
+
+const symbols = {
+    '00': '',
+    '10': '.',
+    '11': '-',
+    '**': ' '
+}
 
 function decode(expr) {
     
