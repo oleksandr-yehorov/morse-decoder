@@ -48,6 +48,14 @@ const symbols = {
 
 function decode(expr) {
     
+    // Initialization decoded string, letter and symbol
+    let decodeStr = '';
+    let letter = '';
+    let symbol = '';
+
+    
+
+    return decodeStr;
     
 
 };
