@@ -53,11 +53,15 @@ function decode(expr) {
     let letter = '';
     let symbol = '';
 
-    
+
+    for (let i = 0; i < expr.length; i++) {
+        symbol += expr[i]; 
+
+       
+    }
 
     return decodeStr;
     
-
 };
 
 module.exports = {
