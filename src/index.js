@@ -62,6 +62,16 @@ function decode(expr) {
             letter += symbols[symbol]; 
             symbol = '';               
         }
+
+        if ((i + 1) % 10 === 0) {               
+            if (letter.indexOf(' ') !== -1) {   
+                decodeStr += ' ';
+            } else {
+                 decodeStr += MORSE_TABLE[letter]; 
+            }
+            
+            letter = '';   
+        }
     }
 
     return decodeStr;
