@@ -53,26 +53,27 @@ function decode(expr) {
     let letter = '';
     let symbol = '';
 
+    // Find symbols, letters and decode string
 
     for (let i = 0; i < expr.length; i++) {
-        symbol += expr[i]; 
+        symbol += expr[i];                      // add expr[i] to symbol variable
 
         if ((i + 1) % 2 === 0) {
-            
-            letter += symbols[symbol]; 
-            symbol = '';               
+        
+            letter += symbols[symbol];          // add letter from symbols 
+            symbol = '';                        // nullifying symbol value for next iteration
         }
 
-        if ((i + 1) % 10 === 0) {               
-            if (letter.indexOf(' ') !== -1) {   
-                decodeStr += ' ';
-            } else {
-                 decodeStr += MORSE_TABLE[letter]; 
-            }
-            
-            letter = '';   
+        if ((i + 1) % 10 === 0) {               // decoding string
+            if (letter.indexOf(' ') !== -1) {   // finding letter spacing
+            decodeStr += ' ';
+        } else {
+             decodeStr += MORSE_TABLE[letter]; // add letter to decoded string
         }
+        
+        letter = '';   // nullifying letter value for next iteration
     }
+}
 
     return decodeStr;
     
