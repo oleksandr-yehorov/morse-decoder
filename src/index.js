@@ -57,7 +57,11 @@ function decode(expr) {
     for (let i = 0; i < expr.length; i++) {
         symbol += expr[i]; 
 
-       
+        if ((i + 1) % 2 === 0) {
+            
+            letter += symbols[symbol]; 
+            symbol = '';               
+        }
     }
 
     return decodeStr;
